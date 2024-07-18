@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
+  <meta itemprop="description" content="Client-side WebRTC code samples">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta id="theme-color" name="theme-color" content="#ffffff">
+
+  <base target="_blank">
+
+  <title>Capturadora de Video</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+  <div id="container">
+    <h1> Capturadora de Video </h1>
+
+    <video id="video" autoplay playsinline muted></video>
+    <button id="startButton" class="tinto" style="display:block;">⭕ Iniciar Grabación</button> <!-- Aplicar estilos tinto a este botón -->
+    <fieldset id="options" style="display:none">
+        <legend>Opciones Avanzadas</legend>
+        <select id="displaySurface" style="display:block; margin-bottom: 10px;">
+            <option value="default" selected>Mostrar opciones de uso compartido predeterminadas</option>
+            <option value="browser">Preferir compartir una pestaña del navegador</option>
+            <option value="window">Preferir compartir una ventana</option>
+            <option value="monitor">Preferir compartir toda la pantalla</option>
+        </select>
+    </fieldset>
+    <div id="errorMsg"></div>
+    <p>Mostrar el flujo de pantalla compartida obtenido con <code>getDisplayMedia()</code> en un elemento de video.</p>
+    <a id="webRTClink" href="//webrtc.github.io/samples/" title="WebRTC samples homepage">Ejemplos de WebRTC</a>
+
+</div>
+
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="grabar.js"></script>
+
+</body>
+</html>
